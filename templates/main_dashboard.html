@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard - Fake Job Detector</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+  <!-- ✅ Flash & navigation -->
+  {% include 'partials/flash.html' %}
+  {% include 'partials/nav.html' %}
+
+  <div class="dashboard-bg"></div>
+
+  <div class="main-content">
+    <!-- ✅ Login success message -->
+    {% if login_message %}
+      <div id="loginMessage" class="temp-message success">
+        {{ login_message }}
+      </div>
+    {% endif %}
+
+    <h2 class="page-title">🚀 Fake Job Detector Dashboard</h2>
+    <p class="page-subtitle">Analyze job postings instantly with AI detection</p>
+
+    <form method="POST" action="{{ url_for('predict') }}" class="neon-card" id="predictionForm">
+      <div class="predict-row">
+        <textarea
+          name="text"
+          rows="5"
+          placeholder="Enter job title, salary_range, company_profile and requirements..."
+          required
+        ></textarea>
+
+        <div class="predict-controls">
+          <button type="submit" class="neon-btn">Predict</button>
+          <div id="predictionResult" class="prediction-result" style="display: none;"></div>
+        </div>
+      </div>
+    </form>
+
+    <div class="history-section">
+      <h3 class="history-title">📜 Your Prediction History</h3>
+
+      <div class="table-wrapper">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Job Description</th>
+              <th>Prediction</th>
+              <th>Timestamp</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for item in items %}
+              <tr>
+                <td>{{ loop.index }}</td>
+                <td class="truncate">{{ item.text }}</td>
+                <td>
+                  {% if "Fake" in item.prediction %}
+                    <strong style="color: red;">{{ item.prediction }}</strong>
+                  {% else %}
+                    <strong style="color: green;">{{ item.prediction }}</strong>
+                  {% endif %}
+                </td>
+                <td>{{ item.timestamp.strftime('%Y-%m-%d %H:%M:%S') }}</td>
+              </tr>
+            {% else %}
+              <tr><td colspan="4" class="text-center text-muted">No predictions yet.</td></tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+  <!-- ✅ Optional JS for fade-out message -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const msg = document.getElementById("loginMessage");
+      if (msg) {
+        setTimeout(() => msg.style.display = "none", 3000);
+      }
+    });
+  </script>
+</body>
+</html>

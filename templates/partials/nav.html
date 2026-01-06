@@ -1,0 +1,18 @@
+<nav class="navbar">
+  <div class="container-fluid navbar-inner">
+    <!-- Left side: brand name -->
+    <a class="navbar-brand" href="{{ url_for('index') }}">
+      <h2 class="navbar-title">Fake Job Detector</h2>
+    </a>
+
+    <!-- Right side: user info + logout/login -->
+    <div class="navbar-links">
+      {% if current_user.is_authenticated %}
+        <span class="navbar-user">Hello, {{ current_user.username }}</span>
+        <a href="{{ url_for('logout') }}" class="neon-btn small">Logout</a>
+      {% else %}
+        <a href="{{ url_for('login') }}" class="neon-btn small">Login</a>
+      {% endif %}
+    </div>
+  </div>
+</nav>

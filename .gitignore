@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Flask
+instance/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# ML
+*.pkl
+*.joblib
+*.h5
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db

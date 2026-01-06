@@ -1,0 +1,54 @@
+Real Job Postings
+
+Job Title: Marketing Manager
+Salary: 38977 per annum
+Company Profile: Global finance corporation with 500+ employees
+Requirements: Bachelor's degree, 2+ years experience, strong communication skills
+
+Job Title: Marketing Manager
+Salary: 52554 per annum
+Company Profile: Reputed IT company with 10 years of experience
+Requirements: Experience in marketing campaigns, content creation
+
+Job Title: Sales Associate
+Salary: 74417 per annum
+Company Profile: Fast-growing SaaS startup based in India
+Requirements: Proficient in Python and SQL, good analytical skills
+
+Job Title: Sales Associate
+Salary: 80293 per annum
+Company Profile: Leading marketing firm in the US
+Requirements: Knowledge of Adobe Photoshop, creativity required
+
+Job Title: Graphic Designer
+Salary: 36903 per annum
+Company Profile: Reputed IT company with 10 years of experience
+Requirements: Proficient in Python and SQL, good analytical skills
+
+
+Fake Job Postings
+
+Job Title: Instant Joining Job
+Salary: 21380 per month
+Company Profile: Company promises instant returns
+Requirements: No interview, just register online
+
+Job Title: Get Paid Daily From Home
+Salary: 15733 per month
+Company Profile: Fake testimonials and unverifiable claims
+Requirements: No experience required, just internet access
+
+Job Title: Data Entry Without Experience
+Salary: 44187 per month
+Company Profile: Fake testimonials and unverifiable claims
+Requirements: No experience required, just internet access
+
+Job Title: Instant Joining Job
+Salary: 27331 per month
+Company Profile: No verified contact details available
+Requirements: Work 2 hours a day and earn big
+
+Job Title: Part-Time Typing Job
+Salary: 36835 per month
+Company Profile: Newly launched company offering huge income
+Requirements: Click ads and get paid instantly

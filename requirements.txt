@@ -1,0 +1,14 @@
+Flask==2.2.5
+Flask-Login
+Flask-WTF
+Flask-Mail
+Flask-Migrate
+SQLAlchemy
+PyMySQL
+python-dotenv
+bcrypt
+itsdangerous
+pandas
+scikit-learn
+xgboost
+joblib

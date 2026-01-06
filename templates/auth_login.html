@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Login - Fake Job Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}" />
+</head>
+<body class="auth-body">
+    {% include 'partials/flash.html' %}
+    <div class="auth-glow-bg"></div>
+
+    <div class="auth-container neon-card">
+    <h2 class="auth-title">Welcome Back</h2>
+    <p class="auth-subtitle">Login to continue detecting fake job posts</p>
+
+    <form method="POST">
+        <div class="input-group">
+        <input type="text" name="email_or_username" placeholder="Email or Username" required />
+        </div>
+        <div class="input-group">
+        <input type="password" name="password" placeholder="Password" required />
+        </div>
+        <button type="submit" class="auth-btn">Login</button>
+    </form>
+
+    <div class="auth-links">
+        <a href="{{ url_for('signup') }}">Create an account</a> |
+        <a href="{{ url_for('reset_request') }}">Forgot Password?</a>
+    </div>
+    </div>
+</body>
+</html>
+

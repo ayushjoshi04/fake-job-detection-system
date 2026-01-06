@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Fake Job Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+</head>
+<body>
+    {% include 'partials/flash.html' %}
+
+    <div class="index-bg"></div>
+
+    <div class="hero-container">
+    <h1 class="hero-title">Fake Job Detector</h1>
+    <p class="hero-subtitle">Detect fake job postings using AI — stay safe from scams 💼</p>
+
+    {% if current_user.is_authenticated %}
+        <a href="{{ url_for('dashboard') }}" class="neon-btn large">Go to Dashboard</a>
+    {% else %}
+        <a href="{{ url_for('login') }}" class="neon-btn large">Login to Continue</a>
+    {% endif %}
+    </div>
+
+    <footer class="footer">
+    <p>© {{ current_year or 2025 }} Fake Job Detector | Powered by AI</p>
+    </footer>
+</body>
+</html>
